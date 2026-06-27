@@ -488,16 +488,17 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
 .hobby-item:hover .hobby-desc { color: var(--text); }
 
 /* ── PROJECTS ── */
-.projects-grid { display: flex; flex-direction: column; gap: 12px; }
+.projects-grid { display: flex; flex-direction: column; gap: 28px; }
 
 .project-row {
-  background: var(--card); padding: 1.75rem 2rem;
+  background: var(--card); padding: 2rem 2.25rem;
   display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;
   transition: all 0.3s; text-decoration: none; color: inherit;
   border: 1px solid var(--border);
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 8px;
 }
 
 .project-row::before {
@@ -532,11 +533,11 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
 .project-row:hover .proj-title { color: var(--accent); }
 
 .proj-desc { font-size: 16px; color: var(--muted); line-height: 1.85; margin-bottom: 0.875rem; }
-.proj-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 0.75rem; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1rem; margin-top: 0.75rem; }
 
 .proj-tag {
-  font-family: var(--mono); font-size: 17px; padding: 3px 10px;
-  border-radius: 4px; background: var(--accent-dim);
+  font-family: var(--mono); font-size: 14px; padding: 6px 12px;
+  border-radius: 6px; background: var(--accent-dim);
   color: var(--accent); border: 1px solid var(--accent-border);
   transition: all 0.2s;
   cursor: default;
@@ -548,7 +549,7 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
   transform: scale(1.05);
 }
 
-.proj-note { font-family: var(--mono); font-size: 17px; color: var(--accent); }
+.proj-note { display: none; }
 
 .proj-arrow { 
   font-size: 18px; color: var(--faint); 
@@ -970,6 +971,7 @@ footer:hover { color: var(--accent); }
           <span class="proj-tag">OpenCV</span>
           <span class="proj-tag">Dlib</span>
           <span class="proj-tag">NumPy</span>
+          <span class="proj-tag">Matplotlib</span>
           <span class="proj-tag">Deep Neural Networks</span>
         </div>
         <span class="proj-note">// Tech Stack: Python, OpenCV, Dlib, NumPy, Pandas, Deep Neural Networks, Computer Vision</span>
