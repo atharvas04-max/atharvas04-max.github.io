@@ -442,6 +442,75 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
   box-shadow: 0 6px 12px rgba(239,68,68,0.15);
 }
 
+/* ── VIRTUAL EXPERIENCE ── */
+#virtual-experience {
+  max-width: 900px; margin: 8rem auto; padding: 0 2rem;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.vexp-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem; margin-top: 2rem;
+}
+
+.vexp-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 10px; padding: 2rem; transition: all 0.3s;
+  position: relative; overflow: hidden;
+}
+
+.vexp-card::before {
+  content: ''; position: absolute; top: -50%; left: -50%;
+  width: 200%; height: 200%; background: radial-gradient(circle, rgba(239,68,68,0.1) 0%, transparent 70%);
+  opacity: 0; transition: opacity 0.3s; pointer-events: none;
+}
+
+.vexp-card:hover {
+  background: var(--card-hover); border-color: var(--accent);
+  transform: translateY(-6px); box-shadow: 0 12px 24px rgba(239,68,68,0.15);
+}
+
+.vexp-card:hover::before { opacity: 1; }
+
+.vexp-header { margin-bottom: 1rem; }
+
+.vexp-company {
+  font-size: 18px; font-weight: 700; color: var(--accent);
+  margin: 0; font-family: var(--mono); letter-spacing: 0.05em;
+}
+
+.vexp-program {
+  font-size: 20px; font-weight: 700; color: var(--text);
+  margin: 0.5rem 0 0; transition: color 0.3s;
+}
+
+.vexp-card:hover .vexp-program { color: var(--accent); }
+
+.vexp-duration {
+  font-size: 13px; color: var(--muted); font-family: var(--mono);
+  letter-spacing: 0.06em; text-transform: uppercase; margin: 0.75rem 0 1rem;
+}
+
+.vexp-desc {
+  font-size: 15px; color: var(--muted); line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.vexp-tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+
+.vexp-tag {
+  font-size: 12px; padding: 5px 10px; border-radius: 4px;
+  background: rgba(239,68,68,0.08); color: var(--accent);
+  border: 1px solid var(--accent-border); font-family: var(--mono);
+  letter-spacing: 0.02em; transition: all 0.2s;
+}
+
+.vexp-tag:hover {
+  background: var(--accent); color: white;
+}
+
 /* ── HOBBIES ── */
 .hobbies-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -826,6 +895,65 @@ footer:hover { color: var(--accent); }
     <p>
       I'm an immediate joiner actively targeting Salesforce Developer and Software Engineer roles across India.
     </p>
+  </div>
+</section>
+
+<!-- VIRTUAL EXPERIENCE -->
+<section id="virtual-experience">
+  <div class="sec-header">
+    <h2 class="sec-title">Virtual Experience</h2>
+    <div class="sec-underline"></div>
+  </div>
+
+  <div class="vexp-grid">
+    <div class="vexp-card">
+      <div class="vexp-header">
+        <p class="vexp-company">JPMorgan Chase & Co.</p>
+        <p class="vexp-program">Advanced Software Engineering - Forage</p>
+      </div>
+      <p class="vexp-duration">~5 hours | Self-paced</p>
+      <p class="vexp-desc">Built Spring Boot backend systems processing high-volume financial transactions using Java 17, Maven, and Kafka event streaming. Gained hands-on exposure to real backend engineering work done at financial institutions including microservices architecture and event-driven systems.</p>
+      <div class="vexp-tags">
+        <span class="vexp-tag">Spring Boot</span>
+        <span class="vexp-tag">Java 17</span>
+        <span class="vexp-tag">Kafka</span>
+        <span class="vexp-tag">JPA</span>
+        <span class="vexp-tag">REST APIs</span>
+        <span class="vexp-tag">Maven</span>
+      </div>
+    </div>
+
+    <div class="vexp-card">
+      <div class="vexp-header">
+        <p class="vexp-company">Deloitte Australia</p>
+        <p class="vexp-program">Technology Simulation - Forage</p>
+      </div>
+      <p class="vexp-duration">2-3 hours | Self-paced</p>
+      <p class="vexp-desc">Practical hands-on experience with data integration and software development for real-world client problems. Unified telemetry data from multiple sources for Daikibo Industrials, a global manufacturing leader, involving both coding and designing structured solutions.</p>
+      <div class="vexp-tags">
+        <span class="vexp-tag">Python</span>
+        <span class="vexp-tag">JSON</span>
+        <span class="vexp-tag">Data Integration</span>
+        <span class="vexp-tag">System Monitoring</span>
+        <span class="vexp-tag">Problem Solving</span>
+      </div>
+    </div>
+
+    <div class="vexp-card">
+      <div class="vexp-header">
+        <p class="vexp-company">Walmart USA</p>
+        <p class="vexp-program">Advanced Software Engineering - Forage</p>
+      </div>
+      <p class="vexp-duration">3-4 hours | Self-paced</p>
+      <p class="vexp-desc">Solved complex technical challenges for multiple Walmart departments gaining insight into meaningful software engineering work. Developed advanced data structures, designed system architectures, and created relational database designs for real-world business scenarios.</p>
+      <div class="vexp-tags">
+        <span class="vexp-tag">Java</span>
+        <span class="vexp-tag">Data Structures</span>
+        <span class="vexp-tag">UML/ERD Design</span>
+        <span class="vexp-tag">Database Design</span>
+        <span class="vexp-tag">SQL</span>
+      </div>
+    </div>
   </div>
 </section>
 
