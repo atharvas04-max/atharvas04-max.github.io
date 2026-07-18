@@ -459,6 +459,7 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
   position: relative;
   overflow: hidden;
   margin-bottom: 8px;
+  cursor: default;
 }
 
 .vexp-header-top {
@@ -506,7 +507,7 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
 
 .vexp-tags { 
   display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 0; 
-  margin-top: 0.75rem;
+  margin-top: 0.75rem; align-items: flex-start;
 }
 
 .vexp-tag {
@@ -515,6 +516,7 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
   color: var(--accent); border: 1px solid var(--accent-border);
   transition: all 0.2s;
   cursor: default;
+  white-space: nowrap;
 }
 
 .vexp-tag:hover { 
@@ -541,6 +543,9 @@ section { padding: 4rem 3rem; max-width: 1000px; margin: 0 auto; }
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  white-space: nowrap;
+  margin-top: 12px;
+  width: fit-content;
 }
 
 .vexp-cert-tag:hover { 
@@ -942,7 +947,7 @@ footer:hover { color: var(--accent); }
   </div>
 
   <div class="vexp-grid">
-    <a class="vexp-row" href="#">
+    <div class="vexp-row">
       <div class="vexp-content">
         <p class="vexp-index">internship_01</p>
         <p class="vexp-title">JPMorgan Chase and Co. - Software Engineering Job Simulation</p>
@@ -958,13 +963,13 @@ footer:hover { color: var(--accent); }
           <span class="vexp-tag">JPA</span>
           <span class="vexp-tag">REST APIs</span>
           <span class="vexp-tag">Maven</span>
-          <a href="jpmorganchase-certificate.pdf" class="vexp-cert-tag" download>📜 View Certificate</a>
         </div>
+        <a href="jpmorganchase-certificate.pdf" class="vexp-cert-tag" download>📜 View Certificate</a>
       </div>
       <span class="vexp-arrow">↗</span>
-    </a>
+    </div>
 
-    <a class="vexp-row" href="#">
+    <div class="vexp-row">
       <div class="vexp-content">
         <p class="vexp-index">internship_02</p>
         <p class="vexp-title">Walmart Global Tech - Advanced Software Engineering Job Simulation</p>
@@ -980,13 +985,13 @@ footer:hover { color: var(--accent); }
           <span class="vexp-tag">Database Design</span>
           <span class="vexp-tag">SQL</span>
           <span class="vexp-tag">Algorithms</span>
-          <a href="walmart-certificate.pdf" class="vexp-cert-tag" download>📜 View Certificate</a>
         </div>
+        <a href="walmart-certificate.pdf" class="vexp-cert-tag" download>📜 View Certificate</a>
       </div>
       <span class="vexp-arrow">↗</span>
-    </a>
+    </div>
 
-    <a class="vexp-row" href="#">
+    <div class="vexp-row">
       <div class="vexp-content">
         <p class="vexp-index">internship_03</p>
         <p class="vexp-title">Deloitte Australia - Technology Job Simulation</p>
@@ -1002,11 +1007,11 @@ footer:hover { color: var(--accent); }
           <span class="vexp-tag">ETL Pipelines</span>
           <span class="vexp-tag">System Monitoring</span>
           <span class="vexp-tag">IoT</span>
-          <a href="deloitte-certificate.pdf" class="vexp-cert-tag" download>📜 View Certificate</a>
         </div>
+        <a href="deloitte-certificate.pdf" class="vexp-cert-tag" download>📜 View Certificate</a>
       </div>
       <span class="vexp-arrow">↗</span>
-    </a>
+    </div>
   </div>
 </section>
 
